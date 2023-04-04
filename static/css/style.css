@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+    width:100%;
+}
+
+
+header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a {
+    color:gray;
+    text-decoration: none;
+}
+
+
+.main-navbar li a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+
+.main-navbar{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.name{
+    float: right;
+    width: 100%;
+    margin-right: 300px;
+    margin-top: 200px;
+    text-align:center;
+
+}
+.name h1{
+    font-size:100px;
+}
+.name h3{
+    margin-top: 20px;
+    font-size:20px;
+    text-transform: uppercase;
+}
+
+.container-logos{
+    position:fixed;
+    bottom:15px;
+    height:50px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.logo{
+    width:30px;
+    height:30px;
+    margin:auto;
+    /*border-radius: 2rem;*/
+    border-radius:2rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+.logo:hover {
+  transform: scale(1.5);
+}
+
+
+/* flip cards start*/
+.project-cards{
+    display:flex;
+    width:100%;
+    justify-content:space-evenly;
+    margin-top: 50px;
+}
+
+.container {
+  width: 350px;
+  height: 500px;
+  perspective: 800px;
+}
+
+.container:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-size: cover;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+.front h1{
+    font-size:35px;
+    font-weight:100;
+    letter-spacing: 2px;
+
+}
+
+.back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:15px;
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-size: cover;
+
+}
+
+.back h1 {
+    font-size: 18px;
+}
+
+.bottom-notes{
+    font-size:17px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+/* flip cards end*/
+
+
+/* resume start*/
+.resume-cards{
+    display:flex;
+    width:100%;
+    justify-content:center;
+    margin-top: 15px;
+}
+
+.container-resume {
+  width: 450px;
+  height: 630px;
+}
+
+.card-resume {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+
+.front-resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+}
+/* resume end*/
+
+/* contact start*/
+
+.contact-upper {
+    color:#424141;
+    margin-top:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-upper h1 {
+    font-size:80px;
+}
+
+.contact-upper h3 {
+    margin-top: 20px;
+    font-size:30px;
+}
+
+.contact-lower {
+    color:#424141;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:120px;
+    gap:10px;
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:120px;
+    gap:10px;
+}
+
+.next-btn, .prv-btn {
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: DodgerBlue;
+  border: none;
+  border-radius:5px;
+  color: white;
+  padding: 6px 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+
+.next-btn:hover, .prv-btn:hover {
+  background-color: RoyalBlue;
+  transform: scale(1.1);
+}
+.next-btn a:active, .prv-btn a:active {
+  color: white;
+}
+.next-btn a, .prv-btn a{
+    color:white;
+    Text-decoration:none;
+}
+
+.next-btn{
+  position:fixed;
+  right:10px;
+  top:45%;
+}
+.prv-btn{
+  position:fixed;
+  left:10px;
+  top:45%;
+}
+
+
+.container-hobbies {
+  width: 365px;
+  height: 250px;
+  perspective: 800px;
+}
+
+.container-hobbies:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.hobbies-note{
+    text-align:center;
+}
+.hobbies-note{
+    font-size:15px;
+    margin-top:20px;
+}

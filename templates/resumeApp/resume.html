@@ -1,0 +1,26 @@
+{% extends 'resumeApp/base.html' %}
+{% load static %}
+
+{% block content %}
+<body style="background-image: url('{% static 'images/common-background.jpg' %}')" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="resume-cards" >
+  <div class="container-resume">
+    <div class="card-resume">
+      <div class="front-resume", style="background-image: url('{% static 'images/resume.jpg' %}')">
+      </div>
+
+    </div>
+  </div>
+  </div>
+<button class="next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+    <a href="{% url 'contact' %}">Next</a>
+</button>
+
+<button class="prv-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+    <a href="{% url 'hobbies' %}">Previous</a>
+</button>
+
+</body>
+
+{% endblock content %}

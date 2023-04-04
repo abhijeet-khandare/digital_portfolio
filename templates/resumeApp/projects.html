@@ -1,0 +1,75 @@
+{% extends 'resumeApp/base.html' %}
+{% load static %}
+
+{% block content %}
+<body style="background-image: url('{% static 'images/common-background.jpg' %}')" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="project-cards" >
+  <div class="container">
+    <div class="card">
+      <div class="front", style="background-image: url('{% static 'images/marketing1.png' %}')">
+      </div>
+      <div class="back", style="background-image: url('{% static 'images/card-back.png' %}')">
+        <h1>Description:</h1>
+        <p>This project aims at providing a tool for marketers which helps them in deciding which marketing touchpoints contributes to
+        scientific journal submission which makes them understand where and how much to put money and efforts.</p>
+        <br>
+        <h1>Roles and responsibilities:</h1>
+        <p>Frontend and Backend Development, Database handling, Client interaction, Deployment.</p>
+        <br>
+        <h1>Technologies used:</h1>
+        <p>Python, SQL, Git & Github, HTML, CSS, JS, XG Boost, Plotly Dash, Pandas, Matplotlib, seaborn.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <div class="front", style="background-image: url('{% static 'images/telecom1.png' %}')">
+      </div>
+      <div class="back", style="background-image: url('{% static 'images/card-back.png' %}')">
+        <h1>Description:</h1>
+        <p>This projects aims at building a telecom switch and hub design tool which takes input as functional requirement and component
+        availability. Churn prediction and troubleshooting using machine learning.</p>
+        <br>
+        <h1>Roles and responsibilities:</h1>
+        <p>Frontend and Backend Development, Database handling, Client interaction, Deployment.</p>
+        <br>
+        <h1>Technologies used:</h1>
+        <p>Python, SQL, Git & Github, HTML, CSS, JS, ML technologies.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <div class="front", style="background-image: url('{% static 'images/cnc1.png' %}')">
+      </div>
+      <div class="back", style="background-image: url('{% static 'images/card-back.png' %}')">
+        <h1>Description:</h1>
+        <p>Development of an application which generates a numeric control machine code which depends on dimensions and surface
+        features of a workpiece to be machined.</p>
+        <br>
+        <h1>Roles and responsibilities:</h1>
+        <p>Frontend and Backend Development, Database handling.</p>
+        <br>
+        <h1>Technologies used:</h1>
+        <p>Python, SQL, Git & Github, HTML, CSS.</p>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+<p class="bottom-notes">* Hover over cards to reveal description..</p>
+<button class="next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+    <a href="{% url 'hobbies' %}">Next</a>
+</button>
+
+<button class="prv-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+    <a href="{% url 'home' %}">Previous</a>
+</button>
+
+</body>
+
+{% endblock content %}

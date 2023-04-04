@@ -1,0 +1,84 @@
+{% extends 'resumeApp/base.html' %}
+{% load static %}
+
+{% block content %}
+<body style="background-image: url('{% static 'images/common-background.jpg' %}')" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+<button class="next-btn"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+    <a href="{% url 'resume' %}">Next</a>
+</button>
+
+<button class="prv-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+    <a href="{% url 'projects' %}">Previous</a>
+</button>
+
+
+<div class="project-cards" >
+
+  <div class="container-hobbies">
+    <div class="card">
+      <div class="front", style="background-image: url('{% static 'images/hobbies/drawingF.jpg' %}')"></div>
+      <div class="back", style="background-image: url('{% static 'images/hobbies/drawingB.jpg' %}')">
+      </div>
+    </div>
+  </div>
+
+    <div class="container-hobbies">
+    <div class="card">
+      <div class="front", style="background-image: url('{% static 'images/hobbies/carF.jpg' %}')"></div>
+      <div class="back", style="background-image: url('{% static 'images/hobbies/carB.png' %}')">
+      </div>
+    </div>
+  </div>
+
+    <div class="container-hobbies">
+    <div class="card">
+      <div class="front", style="background-image: url('{% static 'images/hobbies/gardenF.jpg' %}')"></div>
+      <div class="back", style="background-image: url('{% static 'images/hobbies/gardenB.jpg' %}')">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+<div class="project-cards" >
+
+  <div class="container-hobbies">
+    <div class="card">
+      <div class="front", style="background-image: url('{% static 'images/hobbies/hotwheelsF.jpg' %}')"></div>
+      <div class="back", style="background-image: url('{% static 'images/hobbies/hotwheelsB.jpg' %}')">
+      </div>
+    </div>
+  </div>
+
+    <div class="container-hobbies">
+    <div class="card">
+      <div class="front", style="background-image: url('{% static 'images/hobbies/tankF.jpg' %}')"></div>
+      <div class="back", style="background-image: url('{% static 'images/hobbies/tankB.png' %}')">
+      </div>
+    </div>
+  </div>
+
+    <div class="container-hobbies">
+    <div class="card">
+      <div class="front", style="background-image: url('{% static 'images/hobbies/stuntF.jpeg' %}')"></div>
+      <div class="back", style="background-image: url('{% static 'images/hobbies/stuntB.png' %}')">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="hobbies-note">
+  <p class="hobbies-note">I like to draw, modify cars/bikes, gardening, collecting model cars/rocks/coins, aquascaping and much more..</p>
+  <p class="bottom-notes">* Hover over cards..</p>
+</div>
+
+
+</body>
+
+{% endblock content %}
